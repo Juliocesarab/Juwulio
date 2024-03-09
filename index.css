@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Georgia;
+    
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 30px
+
+}
+.card-item{
+    background: linear-gradient(0deg, #162525, #1d1d1d);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+
+}
+.cabecera{
+    background: #46979f;
+    height: 100px;
+    margin-bottom: 110px;
+}
+img{
+    height:125px;
+    width:125px;
+    border-radius: 200px;
+    object-fit: auto;
+    position: absolute;
+    right: calc(50% - 50px);
+    top: calc(30% - 50px);
+}
+p, label{
+    padding: 5px 20px;
+    font-weight: 600;
+}
+.titulo{
+    font-weight: 200;
+}
