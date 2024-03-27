@@ -13,7 +13,7 @@ function getData(){
     })
 }
 
-function mapearDatos(data){
+function mapearDatos(data, title, category){
     let tabla = "<div class='card'>";
     data.forEach(item => {
         let r = Math.floor( Math.random()*256 ) 
@@ -23,15 +23,15 @@ function mapearDatos(data){
          let bloqueHtml = 
          `
          <div class='card-item'>
-            <div class='cabecera' style="background: rgb(${r} ${g} ${b} );" ></div>
-            <div class='cont-img'>
-                <img src="${item.image}" />
-            </div>
-            <p class='titulo'>${item.title}</p>
-            <p>$${precio} <span class='precio-sd'> $${ ((precio * 0.1) + precio).toFixed(2)  }</span> </p>
-            <label class='categoria'>${item.category}</label>
-            <button onclick='modalProduct(${item.price})' id='openProd'> Descripción </button>
-            
+         <div class='cabecera' style="background: rgb(${r} ${g} ${b} );" ></div>
+         <div class='cont-img'>
+         <img src="${item.image}" />
+         </div>
+         <p class='precio'>${item.titulo}</p>
+         <p>$${precio} <span class='precio-sd'> $${ ((precio * 0.1) + precio).toFixed(2)  }</span> </p>
+         <label class='categoria'>${item.category}</label>
+         <button onclick='modalProduct(${item.price}, "${item.title}", "${item.category}")' id='openProd'> Descripción </button>
+
          </div>
          `;
          tabla += bloqueHtml;
@@ -42,7 +42,7 @@ function mapearDatos(data){
 }
 
 
-function modalProduct(precio ){
+function modalProduct(precio, title, category ){
     console.log(precio)
     let precioModal = document.getElementById("precioModal")
 
@@ -50,7 +50,10 @@ function modalProduct(precio ){
          `
          <div >
            
-            <p class='titulo'>${precio}</p>
+            <p class='titulo'>Precio:${precio}</p>
+            <p class='title'>${titulo}</p>
+            <p class='categoria'>${categoria}</p>
+            
            
             
          </div>
