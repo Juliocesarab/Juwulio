@@ -93,28 +93,37 @@ img{
 p, label{
     padding: 3px 20px;
     font-weight: 600;
+    
 }
 .titulo{
+    background-color:#343333bd;
+    color: #d0e075;
     font-weight: 400;
     max-width: 300px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap ;
+    text-align: center;
 }
 
 .categoria{
-    background-color:#343333bd;
+    /* background-color:#343333bd; */
     border-radius: 20px;
-    color: #6fca8e;
+    /* color: #d0e075; */
     font-weight: 400;
     margin-left: 15px;
+
 }
 
 .precio-sd{
     font-size: 12px;
     color: #a0a0a0;
     text-decoration: line-through;
+    text-align: center;
+
 }
+
+
 button{
     background-color: #46979f;
     border: 0;
@@ -124,6 +133,7 @@ button{
     font-size: 14px;
     padding: 10px 25px;
     opacity: 1;
+    
 
 
 }
@@ -136,10 +146,11 @@ button{
     width: 100vw;
     z-index: 10;
     margin: 0 auto;
-    position: absolute;
+    position: fixed;
 }
 body{
     position: relative;
+
 }
 .modal-container{
     display: none;
@@ -163,12 +174,13 @@ body{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) ;
     text-align: center;
 }
-/* .modal h1{
+.modal h1{
     margin: 0;
+    
 
-} */
-/* .modal p {
+}
+.modal p {
     opacity: 0.7;
     font-size: 14px;
 
-} */
+}
